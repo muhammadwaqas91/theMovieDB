@@ -34,20 +34,29 @@ final class TagCell<T: TagCellConfigurable>: UICollectionViewCell, ReusableCell 
 		label.textAlignment = .center
 		return label
 	}()
+	private lazy var containerView: UIView = {
+		let view = UIView()
+		view.backgroundColor = .darkGray
+		view.clipsToBounds = true
+		view.addSubview(titleLabel)
+		titleLabel.pinToSuperviewEdges(padding: UIEdgeInsets(all: 8), topAnchor: view.topAnchor, leadingAnchor: view.leadingAnchor, trailingAnchor: view.trailingAnchor, bottomAnchor: view.bottomAnchor)
+		
+		return view
+	}()
 	
 	private lazy var mainStackView = UIStackView(
-		arrangedSubviews: [titleLabel],
+		arrangedSubviews: [containerView],
 		axis: .horizontal,
 		spacing: 0,
 		alignment: .fill,
-		distribution: .fill,
-		edgeInsets: UIEdgeInsets(all: 8)
+		distribution: .fill
 	)
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		contentView.addSubview(mainStackView)
-		contentView.backgroundColor = .darkGray
+		backgroundColor = .clear
+		contentView.backgroundColor = .clear
 		
 		guard let superview = mainStackView.superview else { return }
 		mainStackView.pinToSuperviewEdges(padding: .zero,
@@ -63,7 +72,7 @@ final class TagCell<T: TagCellConfigurable>: UICollectionViewCell, ReusableCell 
 	
 	override func layoutSubviews() {
 		super.layoutSubviews()
-		contentView.layer.cornerRadius = contentView.frame.height / 2
+		containerView.layer.cornerRadius = containerView.frame.height / 2
 	}
 
 	func configure(with item: T) {
