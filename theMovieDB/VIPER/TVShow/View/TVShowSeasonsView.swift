@@ -10,7 +10,6 @@ import UIKit
 
 protocol TVShowSeasonsViewDelegate: AnyObject {
 	func didSelectSeason(_ vm: TVSeasonVM)
-	func didSelectEpisode(_ vm: TVEpisodeVM)
 }
 
 final class TVShowSeasonsView: UIView {
@@ -107,12 +106,5 @@ extension TVShowSeasonsView: UICollectionViewDelegate, UICollectionViewDataSourc
 			selectedSeason?.seasonNumber ?? 0 != currentSeasonNumber {
 			selectSeason(current)
 		}
-	}
-}
-
-// MARK: - TVSeasonEpisodesViewDelegate
-extension TVShowSeasonsView: TVSeasonEpisodesViewDelegate {
-	func didSelectEpisode(_ vm: TVEpisodeVM) {
-		delegate?.didSelectEpisode(vm)
 	}
 }

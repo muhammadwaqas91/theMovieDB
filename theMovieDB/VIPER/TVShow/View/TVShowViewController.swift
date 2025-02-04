@@ -172,6 +172,10 @@ extension TVShowViewController: UITableViewDelegate, UITableViewDataSource {
 			didSelectEpisode(episodes[indexPath.row])
 		}
 	}
+	
+	func didSelectEpisode(_ vm: TVEpisodeVM) {
+		presenter?.playEpisode(vm.episodeUrl)
+	}
 }
 
 extension TVShowViewController: TVShowHeaderViewDelegate {
@@ -187,9 +191,5 @@ extension TVShowViewController: TVShowHeaderViewDelegate {
 extension TVShowViewController: TVShowSeasonsViewDelegate {
 	func didSelectSeason(_ vm: TVSeasonVM) {
 		presenter?.fetchSeasonDetails(showId, vm.seasonNumber ?? 0)
-	}
-	
-	func didSelectEpisode(_ vm: TVEpisodeVM) {
-		presenter?.playEpisode(vm.episodeUrl)
 	}
 }
