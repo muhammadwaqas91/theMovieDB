@@ -1,0 +1,24 @@
+{
+  "originHash" : "475effaf057f7a9d2f7099437709b37392d7edc7853a6f8134ed6d7d1482b76d",
+  "pins" : [
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "revision" : "fa3609d1975791c0a6e6f75a56dc20a957967769",
+        "version" : "8.1.4"
+      }
+    },
+    {
+      "identity" : "restapiframework",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/muhammadwaqas91/RestAPIFramework.git",
+      "state" : {
+        "revision" : "fc330f480cda42ccf2dcf174d87b94b233a5d569",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
