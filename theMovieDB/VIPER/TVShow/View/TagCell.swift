@@ -21,7 +21,7 @@ protocol TagCellConfigurable {
 }
 
 // MARK: - Generic CollectionView Cell
-final class TagCell<T: TagCellConfigurable>: UICollectionViewCell, ReusableCell {
+class TagCell<T: TagCellConfigurable>: UICollectionViewCell, ReusableCell {
 	
 	static var reuseIdentifier: String {
 		return String(describing: self)

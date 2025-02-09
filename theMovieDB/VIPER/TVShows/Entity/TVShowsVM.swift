@@ -8,7 +8,7 @@
 import Foundation
 
 /// ViewModel for handling a paginated list of TV shows.
-final class TVShowsVM {
+class TVShowsVM {
 	private(set) var tvShows: [TVShowVM] = []
 	private(set) var currentPage: Int = 0
 	private(set) var totalPages: Int = 1

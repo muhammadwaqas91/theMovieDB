@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class theMovieDBUITestsLaunchTests: XCTestCase {
+class theMovieDBUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

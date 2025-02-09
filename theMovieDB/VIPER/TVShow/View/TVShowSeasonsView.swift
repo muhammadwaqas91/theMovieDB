@@ -12,7 +12,7 @@ protocol TVShowSeasonsViewDelegate: AnyObject {
 	func didSelectSeason(_ vm: TVSeasonVM)
 }
 
-final class TVShowSeasonsView: UIView {
+class TVShowSeasonsView: UIView {
 	weak var delegate: TVShowSeasonsViewDelegate?
 	private var tvSeasonVMs: [TVSeasonVM] = []
 	private var selectedSeason: TVSeasonVM?

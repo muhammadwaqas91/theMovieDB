@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class TVShowsTableViewCell: UITableViewCell {
+class TVShowsTableViewCell: UITableViewCell {
 	static let identifier = "TVShowsTableViewCell"
 
 	private let posterImageView: UIImageView = {

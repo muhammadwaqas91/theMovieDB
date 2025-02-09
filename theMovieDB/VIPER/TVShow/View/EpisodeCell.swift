@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class EpisodeCell: UITableViewCell {
+class EpisodeCell: UITableViewCell {
 	static let identifier = "EpisodeCell"
 
 	private let stillImageView: UIImageView = {
